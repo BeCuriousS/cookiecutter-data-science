@@ -47,18 +47,30 @@ The directory structure of your new project looks like this:
 │   ├── processed      <- The final, canonical data sets for modeling.
 │   └── raw            <- The original, immutable data dump.
 │
+├── docker             <- All the relevant files regarding the creation of a docker container (e.g. Dockerfile)
+│
+├── main               <- Files to execute a grid search for hyperparameter optimization
+│
+├── misc               <- Miscellaneous files like any bash scripts
+│
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
+│   ├── selection      <- Selected models from all session runs
+│   └── sessions       <- All session runs where each run contains the metrics and info for this run
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+│   │                     the creator's initials, and a short `-` delimited description, e.g.
+│   │                     `1.0-jqp-initial-data-exploration`.
+│   ├── experimental   <- Any experimental notebook to explore the data characteristics/attributes
+│   └── explanatory    <- Any explanatory notebook to explain why specific decisions (e.g. regarding architecture,
+│                         preprocessing) were made
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+│   ├── figures        <- Generated graphics and figures to be used in reporting
+│   └── manuscripts    <- Any manuscript that was created within the project/repository
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
